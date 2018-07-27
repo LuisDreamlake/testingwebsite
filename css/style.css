@@ -23,11 +23,11 @@ body {
     padding: 0px;
 }
 
-/*
+
 a-scene {
-    height: 5px;
+    height: 100%;
     width: 100%;
-}*/
+}
 
 p {
     display: block;
@@ -35,7 +35,7 @@ p {
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 

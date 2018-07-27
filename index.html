@@ -9,7 +9,7 @@
 
 <body>
     <div class="row">
-        <div class="col-xs test textWrapper">
+        <div class="col-xs-2 test textWrapper">
             <h1>This 3D page</h1>
             <p>A shining crescent far beneath the flying vessel.</p>
         </div>
@@ -17,7 +17,7 @@
         <div class="col-xs test">
             <div id="myEmbeddedScene">
                 <a-scene embedded vr-mode-ui="enabled: false">
-                    <a-camera wasd-controls-enabled="false" look-controls="false" position="0 2 0"></a-camera>
+                    <a-camera wasd-controls="enabled: false" look-controls="enabled: false; touchEnabled: false; hmdEnabled: false" position="4 6 0" rotation="-45 45 0" fov="50"></a-camera>
                     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
                     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
                     <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="col-xs test textWrapper">
+        <div class="col-xs-4 test textWrapper">
             <p>This is text</p>
         </div>
     </div>
