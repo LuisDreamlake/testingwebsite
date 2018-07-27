@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 </head>
 
 <body>
@@ -12,23 +13,37 @@
         <div class="col-xs-2 test textWrapper">
             <h1>This 3D page</h1>
             <p>A shining crescent far beneath the flying vessel.</p>
+            <p>She stared through the window at the stars.</p>
+            <p>The recorded voice scratched in the speaker.</p>
         </div>
 
         <div class="col-xs test">
             <div id="myEmbeddedScene">
                 <a-scene embedded vr-mode-ui="enabled: false">
                     <a-camera wasd-controls="enabled: false" look-controls="enabled: false; touchEnabled: false; hmdEnabled: false" position="4 6 0" rotation="-45 45 0" fov="50"></a-camera>
-                    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-                    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+                    <a-entity position="0 0.5 -4">
+                        <a-box position="0 0 3" rotation="0 0 0" color="#4CC3D9"></a-box>
+                        <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                    </a-entity>
+                    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" event-set__enter="_event: mouseenter; color: #8FF7FF" event-set__leave="_event: mouseleave; color: #EF2D5E"></a-sphere>
                     <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
                     <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
                     <a-sky color="#ECECEC"></a-sky>
+                    <a-cursor></a-cursor>
                 </a-scene>
             </div>
         </div>
 
         <div class="col-xs-4 test textWrapper">
-            <p>This is text</p>
+            <h1>This 3D page</h1>
+            <p>A shining crescent far beneath the flying vessel. The spectacle before us was indeed sublime.</p>
+            <p>She stared through the window at the stars.The spectacle before us was indeed sublime.</p>
+            <p>The recorded voice scratched in the speaker.The spectacle before us was indeed sublime.The spectacle before us was indeed sublime.The spectacle before us was indeed sublime.</p>
+            <br>
+            <br>
+            <a class="button" target="_blank" href="#">
+                GET STARTED
+            </a>
         </div>
     </div>
 </body>
