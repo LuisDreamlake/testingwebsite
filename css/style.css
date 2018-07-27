@@ -1,0 +1,44 @@
+html,
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.test {
+    background-color: dodgerblue;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+/*
+a-scene {
+    height: 5px;
+    width: 100%;
+}*/
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 2em;
+}
+
+
+.textWrapper {
+    padding-left: 50;
+}
